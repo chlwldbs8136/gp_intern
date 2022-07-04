@@ -1,0 +1,55 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "deploy": "electron-builder --windows nsis:ia320",
+    
+    "build:win64":"build --win --x64"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^19.0.6",
+    "electron-builder": "^23.1.0"
+  },
+  "build": {
+    "productName": "application",
+    "appId" : "com.electron.application",
+    "asar" : "true",
+    "win" : {
+      "target" : [
+        "nsis"
+      ],
+      "icon": "asset/icons/icon.ico"
+    },
+    "nsis" : {
+      "oneClick" : false,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "perMachine": true,
+      "language": 1042,
+      "installerIcon": "asset/icons/icon.ico",
+      "shortcutName": "application",
+      "artifactName": "app-${version}.${ext}",
+      "uninstallDisplayName": "electron_Application"
+    },
+    "directories": {
+      "buildResources": "./build/",
+      "output": "./build/"
+    }
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1"
+  }
+}
