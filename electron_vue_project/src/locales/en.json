@@ -1,0 +1,20 @@
+{
+  "login" : {
+    "id" : "ID",
+    "password" : "password",
+    "language" : "ENGLISH",
+    "wrong" : "Wrong ID or Password"
+  },
+  "main" : {
+    "greeting" : "Hello world.",
+    "logout" : "LOGOUT",
+    "menubar": {
+      "admin" : "Administrator",
+      "distribute" : "Distribution",
+      "license" : "License",
+      "db": "database",
+      "server": "server",
+      "locator": "locator"
+    }
+  }
+}
